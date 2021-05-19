@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table weltklage_shopofcomputers_monitors'
+    - builder_table_create_weltklage_shopofcomputers_monitors.php
+1.0.3:
+    - 'Updated table weltklage_shopofcomputers_monitors'
+    - builder_table_update_weltklage_shopofcomputers_monitors.php

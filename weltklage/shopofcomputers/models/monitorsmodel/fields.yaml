@@ -1,0 +1,13 @@
+fields:
+    monitor_type:
+        label: 'Monitor Type'
+        span: auto
+        type: text
+    resolution:
+        label: Resolution
+        span: auto
+        type: text
+    colors_number:
+        label: 'Number of colors'
+        span: auto
+        type: number

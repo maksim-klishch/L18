@@ -1,0 +1,11 @@
+plugin:
+    name: 'weltklage.shopofcomputers::lang.plugin.name'
+    description: 'weltklage.shopofcomputers::lang.plugin.description'
+    author: Weltklage
+    icon: oc-icon-file
+    homepage: ''
+navigation:
+    shop-of-computers-menu-item:
+        label: 'Shop of computers'
+        url: weltklage/shopofcomputers/monitorscontroller
+        icon: icon-calculator

@@ -1,0 +1,12 @@
+columns:
+    monitor_type:
+        label: 'Monitor type'
+        type: text
+        searchable: true
+    resolution:
+        label: Resolution
+        type: text
+        searchable: true
+    colors_number:
+        label: 'Number of colors'
+        type: number

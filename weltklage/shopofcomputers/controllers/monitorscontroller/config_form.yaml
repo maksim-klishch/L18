@@ -1,0 +1,11 @@
+name: MonitorsController
+modelClass: Weltklage\Shopofcomputers\Models\MonitorsModel
+form: $/weltklage/shopofcomputers/models/monitorsmodel/fields.yaml
+defaultRedirect: weltklage/shopofcomputers/monitorscontroller
+create:
+    redirect: 'weltklage/shopofcomputers/monitorscontroller/update/:id'
+    redirectClose: weltklage/shopofcomputers/monitorscontroller
+update:
+    redirect: weltklage/shopofcomputers/monitorscontroller
+    redirectClose: weltklage/shopofcomputers/monitorscontroller
+preview: {  }

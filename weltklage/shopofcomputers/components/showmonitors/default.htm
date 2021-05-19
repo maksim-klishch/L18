@@ -1,0 +1,51 @@
+{% set MonitorBase=__SELF__.monitorBases %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% framework %}
+
+<h2>Monitors</h2>
+{% if MonitorBase %}
+    <table border="1" width="100%">
+    {% for item in MonitorBase %}
+    <tr>
+        <td>{{ item.monitor_type }}</td> 
+        <td>{{ item.resolution }}</td> 
+        <td>{{ item.colors_number }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+{% endif %}
+
+<div class="modal fade" id="MonitorModal" tabindex="-1" role="dialog" aria-labelledby="MonitorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="MonitorModalLabel">{{ 'newmonitor' | _}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form name="modalform">
+                    <div class="form-group">
+                        <label for="monitor_type" class="col-form-label">Monitor type:</label>
+                        <input type="text" name="monitor_type" class="form-control" id="monitor_type">
+                    </div>
+                    <div class="form-group">
+                        <label for="resolution" class="col-form-label">Resolution:</label>
+                        <input type="text" name="resolution" class="form-control" id="resolution">
+                    </div>
+                    <div class="form-group">
+                        <label for="number_of_colors" class="col-form-label">Number of colors:</label>
+                        <input type="number" name="number_of_colors" class="form-control" id="number_of_colors">
+                    </div>
+                
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary action-button" data-dismiss="modal">{{ 'Close' | _}}</button>
+                        <button type="button" class="btn btn-primary action-button" data-request="{{ __SELF__ }}::onSaveData" data-request-complete=$("#CallModal").modal("hide") data-request-success="alert('Yay!')">{{ 'add' | _}}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

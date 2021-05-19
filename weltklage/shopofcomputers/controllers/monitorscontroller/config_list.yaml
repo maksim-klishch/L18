@@ -1,0 +1,12 @@
+title: MonitorsController
+modelClass: Weltklage\Shopofcomputers\Models\MonitorsModel
+list: $/weltklage/shopofcomputers/models/monitorsmodel/columns.yaml
+recordUrl: 'weltklage/shopofcomputers/monitorscontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
